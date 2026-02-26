@@ -139,7 +139,9 @@ python Analyser.py --url "TRACKER_URL"
 
 Recommended run:
 
-python Analyser.py --url "TRACKER_URL" --max-clicks 80 --slow --headless
+```bash
+python Analyser.py --url "TRACKER_URL" --max-clicks 80 --slow
+```
 
 Options:
 

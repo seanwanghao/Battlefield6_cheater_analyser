@@ -40,7 +40,7 @@ Pipeline:
 1.  Playwright launches Chromium browser
 2.  Opens Tracker.gg match history page
 3.  Extracts player_id from document.title
-4.  Clicks Load More repeatedly
+4.  Auto Clicks Load More repeatedly
 5.  Extracts match stats from DOM
 6.  Classifies matches into Battle Royale and Multiplayer
 7.  Computes statistical anomaly signals
@@ -171,6 +171,9 @@ Tracker.gg layout changes may require script updates.
 ## Workflow
 
 1.  Run tool
-2.  Review report.json
-3.  Inspect suspicious matches in matches.csv
-4.  Perform manual verification
+2.  Wait for the script caputre records from Tracker.gg
+3.  When the records was fully captured, brower will be automatically closed
+4.  Review report in the terminal 
+5.  Review report.json
+6.  Inspect suspicious matches in matches.csv
+7.  Perform manual verification

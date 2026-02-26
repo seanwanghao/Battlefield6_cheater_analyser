@@ -170,10 +170,11 @@ Tracker.gg layout changes may require script updates.
 
 ## Workflow
 
-1.  Run tool
-2.  Wait for the script caputre records from Tracker.gg
-3.  When the records was fully captured, brower will be automatically closed
-4.  Review report in the terminal 
-5.  Review report.json
-6.  Inspect suspicious matches in matches.csv
-7.  Perform manual verification
+1.  Find the player you would like to check on Tracker.gg and go to the "Sessions" page and copy the URL (it should be "https://tracker.gg/bf6/profile/<user_id_number>/matches")
+2.  Run the tool and paste the URL to the commandline
+3.  Wait for the script to capture records from Tracker.gg
+4.  When the records were fully captured, brower will be automatically closed
+5.  Review the report in the terminal 
+6.  Review report.json
+7.  Inspect suspicious matches in matches.csv
+8.  Perform manual verification

@@ -121,8 +121,14 @@ Checks digit distribution when statistically valid.
 
 Install dependencies:
 
-pip install pandas playwright python -m playwright install chromium
+```bash
+pip install pandas playwright
+```
+Install the Playwright Chromium browser:
 
+```bash
+python -m playwright install chromium
+```
 ------------------------------------------------------------------------
 
 ## Usage

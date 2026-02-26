@@ -63,6 +63,10 @@ Measures frequency of extreme performance:
 
 Score computed using weighted severity mapping.
 
+Final score:
+
+FPS_score = 100 × Σ(weight × severity)
+
 ------------------------------------------------------------------------
 
 ### Statistical anomaly score
@@ -73,6 +77,9 @@ Combines:
 -   Robust outlier component
 -   Heaping component
 -   Benford deviation component
+
+Risk_score = 100 × (0.50×FPS + 0.25×Outliers + 0.15×Heaping +
+0.10×Benford)
 
 ------------------------------------------------------------------------
 
@@ -85,6 +92,8 @@ Heuristic probability combining:
 -   sample size
 -   triggered indicators
 
+Clamped to 0--100%.
+
 ------------------------------------------------------------------------
 
 ### Estimated model accuracy
@@ -95,6 +104,8 @@ Confidence estimate based on:
 -   signal strength
 -   data quality
 
+This is confidence, not true accuracy.
+
 ------------------------------------------------------------------------
 
 ### Outlier detection
@@ -103,17 +114,35 @@ Uses Median Absolute Deviation (MAD):
 
 z = 0.6745 × (x − median) / MAD
 
+Used to detect extreme match-level anomalies.
+
 ------------------------------------------------------------------------
 
 ### Heaping detection
 
-Detects abnormal rounding patterns in values.
+Detects excessive rounding patterns such as values ending in 0, 5, or
+00.
 
 ------------------------------------------------------------------------
 
 ### Benford analysis
 
-Checks digit distribution when statistically valid.
+Applied only when:
+
+-   sample size sufficient
+-   digit span sufficient
+
+Used as weak supporting signal.
+
+------------------------------------------------------------------------
+
+### Data sanity checks
+
+Detects scraping errors using:
+
+zero_share_kills zero_share_deaths
+
+High values trigger reliability warning.
 
 ------------------------------------------------------------------------
 
@@ -172,9 +201,10 @@ This tool assists investigation but does not confirm cheating.
 
 ## Limitations
 
-This tool detects statistical anomalies only.
+This tool does NOT prove cheating. It identifies statistical anomalies
+only.
 
-Tracker.gg layout changes may require script updates.
+DOM scraping may break if Tracker.gg changes layout.
 
 ------------------------------------------------------------------------
 

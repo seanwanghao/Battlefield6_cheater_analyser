@@ -174,9 +174,9 @@ python Analyser.py --url "TRACKER_URL" --max-clicks 80 --slow
 
 Options:
 
---max-clicks <number of Load More clicks (default 100)> 
---outdir <output directory (default current directory)
---headless <run without browser (not recommand)> window 
+--max-clicks <number of Load More clicks (default 100)> \n
+--outdir <output directory (default current directory) \n
+--headless <run without browser (not recommand)> window \n
 --slow <slower scraping (recommand)>
 
 ------------------------------------------------------------------------

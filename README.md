@@ -206,6 +206,8 @@ only.
 
 DOM scraping may break if Tracker.gg changes layout.
 
+With limited access to players' records, more data, such as headshot%, gun accuracy, may need to be added in identifyer in the future
+
 ------------------------------------------------------------------------
 
 ## Workflow

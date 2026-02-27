@@ -29,7 +29,7 @@ Outputs:
     diagnostics
 -   meta.json --- scraping metadata including extracted player_id
 
-Important: This tool provides screening signals, NOT proof.
+Important: This tool provides screening signals, NOT proof. Pro Players might be identified as high cheat probability
 
 ------------------------------------------------------------------------
 
